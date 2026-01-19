@@ -7,7 +7,7 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState('All')
 
   useEffect(() => {
-    fetch('https://nandani-shop.onrender.com//api/products/')
+    fetch('https://nandani-shop.onrender.com/api/products/')
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.error('Error:', error))
