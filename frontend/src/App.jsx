@@ -78,7 +78,7 @@ const filteredProducts = products.filter(product => {
         {filteredProducts.map((product) => (
           <div key={product.id} className="card">
             <img 
-              src={`https://nandani-shop.onrender.com/${product.image}`} 
+              src={`https://nandani-shop.onrender.com${product.image}`} 
               alt={product.name} 
             />
             <div className="card-details">
@@ -125,7 +125,7 @@ const filteredProducts = products.filter(product => {
         ))}
       </div>
             <footer className="footer">
-        <h3>Nandani Collections</h3>
+        <h3>Nandani Collection</h3>
         <p>✨ Premium Suits for Elegance & Style ✨</p>
         
         <p>📍 Gurugram, Haryana</p>
@@ -138,7 +138,7 @@ const filteredProducts = products.filter(product => {
         </p>
 
         <p style={{ fontSize: '12px', marginTop: '20px', color: '#aaa' }}>
-          © 2026 Nandani Collections. All rights reserved.
+          © 2026 Nandani Collection. All rights reserved.
         </p>
       </footer>
       {/* Footer यहाँ ख़त्म */}
