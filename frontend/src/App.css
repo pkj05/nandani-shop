@@ -1,0 +1,196 @@
+/* 1. पूरी वेबसाइट का बैकग्राउंड */
+body {
+  background-color: #fdfbf7; /* हल्का क्रीम कलर (Premium Feel) */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. ऊपर वाली पट्टी (Navbar) */
+.navbar {
+  background-color: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  position: sticky; /* यह हमेशा ऊपर चिपका रहेगा */
+  top: 0;
+  z-index: 1000;
+  text-align: center;
+}
+
+.navbar h1 {
+  margin: 0;
+  color: #d32f2f; /* गहरा लाल (Branding Color) */
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.navbar p {
+  margin: 5px 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* 3. प्रोडक्ट कंटेनर (Grid) */
+.product-container {
+  display: grid;
+  /* मोबाइल पर 2 कॉलम, लैपटॉप पर ज्यादा */
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 4. सूट का कार्ड */
+.card {
+  background: #fff;
+  border-radius: 12px; /* गोल कोने */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* परछाई */
+  overflow: hidden;
+  transition: transform 0.2s;
+  border: 1px solid #eee;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* माउस ले जाने पर थोड़ा ऊपर उठेगा */
+}
+
+/* 5. सूट की फोटो */
+.card img {
+  width: 100%;
+  height: 250px; /* फिक्स हाइट ताकि सब बराबर दिखें */
+  object-fit: cover; /* फोटो कटेगी नहीं, फिट हो जाएगी */
+  display: block;
+}
+
+/* 6. कार्ड के अंदर का टेक्स्ट */
+.card-details {
+  padding: 12px;
+  text-align: left;
+}
+
+.card h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  color: #333;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; /* नाम लंबा हुआ तो '...' आएगा */
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2e7d32; /* कीमत हरे रंग में */
+  margin: 5px 0 10px;
+}
+
+/* 7. खरीदने वाला बटन */
+.btn {
+  width: 100%;
+  background-color: #25D366; /* WhatsApp Green */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn:active {
+  background-color: #1ebc57; /* दबाने पर थोड़ा गहरा */
+}
+/* Hero Section (सबसे ऊपर वाला बैनर) */
+.hero {
+  background: linear-gradient(135deg, #d32f2f 0%, #ff5252 100%); /* शाही लाल रंग */
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  margin-bottom: 30px;
+  border-radius: 0 0 20px 20px; /* नीचे से गोल कोने */
+  box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin: 0;
+  font-family: 'Playfair Display', serif; /* थोड़ा स्टाइलिश फॉन्ट */
+}
+
+.hero p {
+  font-size: 16px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+/* Footer Design */
+.footer {
+  background-color: #333;   /* गहरा काला रंग */
+  color: white;             /* सफ़ेद टेक्स्ट */
+  text-align: center;       /* सब कुछ बीच में */
+  padding: 40px 20px;
+  margin-top: 50px;         /* ऊपर वाले सामान से थोड़ी दूरी */
+  border-top: 5px solid #d32f2f; /* ऊपर एक लाल पट्टी (Brand Color) */
+}
+
+.footer p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.footer a {
+  color: #ffeb3b; /* लिंक का रंग (पीला) ताकि अलग दिखे */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 1. पूरी वेबसाइट को बीच में रखने के लिए */
+.app-container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center; /* टेक्स्ट भी सेंटर */
+}
+
+/* 2. Search Bar को एकदम बीच में लाने के लिए */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.navbar input {
+  width: 100%;
+  max-width: 500px; /* सर्च बॉक्स ज्यादा चौड़ा न हो */
+  text-align: center;
+}
+
+/* 3. Category Buttons को बीच में लाने के लिए */
+/* (अगर आपने वहां Inline Style नहीं हटाया है तो यह काम करेगा) */
+div[style*="flex"] {
+  justify-content: center !important;
+  flex-wrap: wrap;
+}
+
+/* 4. Products Grid को बैलेंस करने के लिए */
+.product-grid {
+  display: flex;            /* Flexbox सबसे अच्छा है Centering के लिए */
+  flex-wrap: wrap;          /* लाइन भर जाए तो नीचे आए */
+  justify-content: center;  /* एकदम बीच में */
+  gap: 25px;                /* कार्ड्स के बीच थोड़ी दूरी */
+  padding: 20px;
+}
+
+.product-card {
+  text-align: left; /* कार्ड के अंदर का टेक्स्ट लेफ्ट ही अच्छा लगता है */
+  width: 280px;     /* सभी कार्ड बराबर चौड़ाई के */
+}

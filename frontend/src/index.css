@@ -1,0 +1,21 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: block; /* फ्लेक्स हटाएं ताकि सेंटर काम करे */
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f9f9f9; /* हल्का सा बैकग्राउंड रंग */
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
