@@ -7,7 +7,7 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState('All')
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/products/')
+    fetch('https://nandani-shop.onrender.com//api/products/')
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.error('Error:', error))
@@ -78,7 +78,7 @@ const filteredProducts = products.filter(product => {
         {filteredProducts.map((product) => (
           <div key={product.id} className="card">
             <img 
-              src={`http://127.0.0.1:8000${product.image}`} 
+              src={`https://nandani-shop.onrender.com/${product.image}`} 
               alt={product.name} 
             />
             <div className="card-details">
